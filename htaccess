@@ -1,0 +1,147 @@
+AddDefaultCharset UTF-8
+SetEnv TZ Europe/Vienna
+DefaultLanguage en-GB
+
+
+RewriteEngine On
+
+RewriteRule ^$ /pages/startpage.php [NC,L]
+RewriteRule ^index$ /pages/startpage.php [NC,L]
+
+
+RewriteRule ^cms$ /cms/index.php [NC,L]
+RewriteRule ^cms/$ /cms/index.php [NC,L]
+
+RewriteRule ^contact-me$ /pages/contact.php [NC,L]
+
+RewriteRule ^forgot-password$ /lib/login/pages/forgot-password.php [NC,L]
+RewriteRule ^reset-password$ /lib/login/pages/reset-password.php [NC,L]
+RewriteRule ^sign-up$ /lib/login/pages/sign-up.php [NC,L]
+
+RewriteRule ^cms/new/project$ /cms/content/project/add.php [NC,L]
+
+RewriteRule ^cms/add/([0-9a-zA-Z_-]+)$ /cms/content/archive/add.php?key=$1 [NC,L]
+
+#RewriteRule ^cms/add/([0-9a-zA-Z_-]+)/project$ /cms/content/project/add.php?key=$1 [NC,L]
+
+RewriteRule ^cms/edit/startpage$ /cms/content/project/edit.php?id=1&key=startpage [NC,L]
+
+RewriteRule ^cms/trash$ /cms/content/project/pages/trash.php [NC,L]
+
+
+RewriteRule ^projects/([0-9a-zA-Z_-]+)$ /pages/projects.php?cat=$1 [NC,L]
+RewriteRule ^projects/([0-9a-zA-Z_-]+)/$ /pages/projects.php?cat=$1 [NC,L]
+RewriteRule ^projects/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/projects.php?cat=$1&sub_cat=$2 [NC,L]
+RewriteRule ^projects/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)/$ /pages/projects.php?cat=$1&sub_cat=$2 [NC,L]
+RewriteRule ^projects/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/projects.php?cat=$1&sub_cat=$2&p_slug=$3 [NC,L]
+RewriteRule ^projects/$ /pages/projects.php [NC,L]
+RewriteRule ^projects$ /pages/projects.php [NC,L]
+
+RewriteRule ^snippets/([0-9a-zA-Z_-]+)$ /pages/snippets.php?sub_cat=$1 [NC,L]
+RewriteRule ^snippets/([0-9a-zA-Z_-]+)/$ /pages/snippets.php?sub_cat=$1 [NC,L]
+RewriteRule ^snippets/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/snippets.php?sub_cat=$1&p_slug=$2 [NC,L]
+RewriteRule ^snippets/$ /pages/snippets.php [NC,L]
+
+RewriteRule ^web-design/([0-9a-zA-Z_-]+)$ /pages/web-design.php?sub_cat=$1 [NC,L]
+RewriteRule ^web-design/([0-9a-zA-Z_-]+)/$ /pages/web-design.php?sub_cat=$1 [NC,L]
+RewriteRule ^web-design/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/web-design.php?sub_cat=$1&p_slug=$2 [NC,L]
+RewriteRule ^web-design/$ /pages/web-design.php [NC,L]
+
+RewriteRule ^server/([0-9a-zA-Z_-]+)$ /pages/server.php?sub_cat=$1 [NC,L]
+RewriteRule ^server/([0-9a-zA-Z_-]+)/$ /pages/server.php?sub_cat=$1 [NC,L]
+RewriteRule ^server/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/server.php?sub_cat=$1&p_slug=$2 [NC,L]
+RewriteRule ^server/$ /pages/server.php [NC,L]
+
+RewriteRule ^developement/([0-9a-zA-Z_-]+)$ /pages/developement.php?cat=$1 [NC,L]
+RewriteRule ^developement/([0-9a-zA-Z_-]+)/$ /pages/developement.php?cat=$1 [NC,L]
+RewriteRule ^developement/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/developement.php?cat=$1&sub_cat=$2 [NC,L]
+RewriteRule ^developement/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)/$ /pages/developement.php?cat=$1&sub_cat=$2 [NC,L]
+RewriteRule ^developement/([0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)/([\:\+0-9a-zA-Z_-]+)$ /pages/developement.php?cat=$1&sub_cat=$2&p_slug=$3 [NC,L]
+RewriteRule ^developement/$ /pages/developement.php [NC,L]
+RewriteRule ^developement$ /pages/developement.php [NC,L]
+ 
+RewriteRule ^startseite$ /pages/startpage.php [NC,L]
+#||
+
+
+
+# REMOVE EXTENSIONS
+
+	# PHP
+
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_FILENAME}\.php -f
+		RewriteRule ^(.*)$ $1\.php [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
