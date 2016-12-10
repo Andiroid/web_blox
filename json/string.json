@@ -1,0 +1,45 @@
+{
+
+	"strings_archive": [
+
+		{
+			"en": "ALL",
+			"de": "ALLE"
+		},
+
+		{
+			"en": "Page",
+			"de": "Seite"
+		},
+
+		{
+			"en": "of",
+			"de": "von"
+		},
+
+		{
+			"en": "mode",
+			"de": "Modus"
+		},
+
+		{
+			"en": "ordered by ",
+			"de": "geordnet nach "
+		},
+
+		{
+			"en": "search",
+			"de": "suchen"
+		}
+
+	],
+
+	"strings_system": [
+
+		{
+			"en": "Hallo",
+			"de": "Hallo"
+		}
+	]
+
+}
